@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="NIVORA SILVER">
+  <rect width="320" height="120" fill="none"/>
+  <g fill="none" stroke="#d9d9d9" stroke-width="3">
+    <path d="M24 86V34l28 52V34"/>
+    <path d="M78 86V34l28 52V34"/>
+  </g>
+  <text x="126" y="61" fill="#f2f2f2" font-family="Georgia,serif" font-size="30" letter-spacing="5">NIVORA</text>
+  <text x="128" y="88" fill="#a9a9a9" font-family="Arial,sans-serif" font-size="13" letter-spacing="7">SILVER</text>
+</svg>
