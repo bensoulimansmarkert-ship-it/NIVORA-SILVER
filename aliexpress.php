@@ -1,0 +1,3 @@
+<?php
+header('Content-Type: application/json; charset=utf-8');$b=json_decode(file_get_contents('php://input'),true)?:[];$u=$b['url']??'';if(!preg_match('~^https?://(www\.)?aliexpress\.com/~i',$u)){http_response_code(400);echo json_encode(['error'=>'رابط AliExpress غير صالح']);exit;}$f=__DIR__.'/../data/import-queue.json';$q=file_exists($f)?json_decode(file_get_contents($f),true):[];$q[]=['url'=>$u,'status'=>'pending','createdAt'=>date('c')];file_put_contents($f,json_encode($q,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));echo json_encode(['ok'=>true,'message'=>'تمت إضافة الرابط إلى قائمة الاستيراد. ربط API/DSers مطلوب لجلب البيانات والصور تلقائيًا.']);
+?>
