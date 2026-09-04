@@ -1,0 +1,4 @@
+<?php
+header('Content-Type: application/json; charset=utf-8');$f=__DIR__.'/../data/settings.json';
+if($_SERVER['REQUEST_METHOD']==='POST'){ $b=json_decode(file_get_contents('php://input'),true)?:[];$s=json_decode(@file_get_contents($f),true)?:['profitPercent'=>10,'payment'=>['number'=>'01065859268','iban'=>''],'shipping'=>['provider'=>'Supplier/AliExpress']];$s['profitPercent']=(float)($b['profitPercent']??10);$s['payment']['number']=$b['vodafone']??$s['payment']['number'];$s['payment']['iban']=$b['iban']??'';$s['shipping']['provider']=$b['shipping']??$s['shipping']['provider'];file_put_contents($f,json_encode($s,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));echo json_encode(['ok'=>true]);}else echo file_get_contents($f);
+?>

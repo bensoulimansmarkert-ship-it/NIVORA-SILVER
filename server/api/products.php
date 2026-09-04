@@ -1,0 +1,1 @@
+<?php header('Content-Type: application/json; charset=utf-8'); $f=__DIR__.'/../data/products.json'; echo json_encode(['products'=>json_decode(@file_get_contents($f),true)?:[]],JSON_UNESCAPED_UNICODE); ?>
