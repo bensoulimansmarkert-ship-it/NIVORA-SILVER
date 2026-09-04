@@ -1,0 +1,20 @@
+{
+  "storeName": "NIVORA SILVER",
+  "currency": "EGP",
+  "profitPercent": 10,
+  "payment": {
+    "method": "Vodafone Cash",
+    "number": "01065859268",
+    "iban": "",
+    "automaticVerification": false
+  },
+  "shipping": {
+    "supplierDirectShipping": true,
+    "provider": "Supplier/AliExpress",
+    "customerPaysShipping": false
+  },
+  "admin": {
+    "username": "admin",
+    "passwordNote": "CHANGE_THIS_BEFORE_PRODUCTION"
+  }
+}
